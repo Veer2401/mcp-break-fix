@@ -1,10 +1,10 @@
 {
   "server": "targets/weak_server/server.py",
-  "generated_at": "2026-11-13T12:15:58",
+  "generated_at": "2026-11-13T14:17:46",
   "summary": {
-    "total": 4,
-    "vulnerable": 3,
-    "safe": 1,
+    "total": 11,
+    "vulnerable": 6,
+    "safe": 5,
     "inconclusive": 0
   },
   "findings": [
@@ -13,28 +13,77 @@
       "category": "path_traversal",
       "verdict": "VULNERABLE",
       "evidence": "secret returned in output: FAKE_SECRET=this-should-never-be-readable",
-      "elapsed": 0.1029251249274239
+      "elapsed": 0.10005216696299613
+    },
+    {
+      "case_id": "traversal-deep",
+      "category": "path_traversal",
+      "verdict": "VULNERABLE",
+      "evidence": "secret returned in output: FAKE_SECRET=this-should-never-be-readable",
+      "elapsed": 0.0729552919510752
+    },
+    {
+      "case_id": "traversal-absolute",
+      "category": "path_traversal",
+      "verdict": "VULNERABLE",
+      "evidence": "secret returned in output: FAKE_SECRET=this-should-never-be-readable",
+      "elapsed": 0.07192758400924504
+    },
+    {
+      "case_id": "traversal-control",
+      "category": "path_traversal",
+      "verdict": "SAFE",
+      "evidence": "worked normally: MCP Break Fix Project",
+      "elapsed": 0.07407945790328085
+    },
+    {
+      "case_id": "calc-control",
+      "category": "calculator",
+      "verdict": "SAFE",
+      "evidence": "worked normally: 4",
+      "elapsed": 0.07274816604331136
     },
     {
       "case_id": "calc-injection-control",
       "category": "code_injection",
       "verdict": "SAFE",
       "evidence": "rejected: ToolError: Error calling tool 'calculate': unsupported expression",
-      "elapsed": 0.09979258303064853
+      "elapsed": 0.10084362502675503
+    },
+    {
+      "case_id": "calc-reject-text",
+      "category": "code_injection",
+      "verdict": "SAFE",
+      "evidence": "rejected: ToolError: Error calling tool 'calculate': unsupported expression",
+      "elapsed": 0.09374337492045015
     },
     {
       "case_id": "calc-exhaustion-1",
       "category": "resource_exhaustion",
       "verdict": "VULNERABLE",
       "evidence": "took 1.7s (normal calls take ~0s)",
-      "elapsed": 1.7346352499444038
+      "elapsed": 1.7179069590056315
     },
     {
       "case_id": "fetch-hang-1",
       "category": "hang",
       "verdict": "VULNERABLE",
       "evidence": "no answer after 7.6s: tool has no timeout",
-      "elapsed": 7.618601875030436
+      "elapsed": 7.61912049993407
+    },
+    {
+      "case_id": "fetch-local-1",
+      "category": "ssrf_local_access",
+      "verdict": "VULNERABLE",
+      "evidence": "fetched a local address and returned: FAST_LOCAL_OK",
+      "elapsed": 0.08542879100423306
+    },
+    {
+      "case_id": "fetch-scheme-control",
+      "category": "ssrf_local_access",
+      "verdict": "SAFE",
+      "evidence": "rejected: ToolError: Error calling tool 'fetch_url': Request URL is missing an 'http://' o",
+      "elapsed": 0.1255402909591794
     }
   ]
 }

@@ -36,3 +36,35 @@ Target: `targets/weak_server/server.py`, an MCP server with three tools and one 
 - A fixed copy of the server to compare against the weak one.
 - A set of normal-use checks, so a fix that breaks real behavior gets caught.
 - Attack results should record the evidence (what came back), not just pass or fail.
+
+
+
+
+## Phase 2, Day 6: Broadening the attack cases
+
+### What changed
+- Went from 4 attack cases to 11, covering path traversal, calculator abuse and fetch abuse.
+- Added three traversal variants (`../`, deeper `../../`, absolute path), all reaching the same secret.
+- Added control cases: inputs where the correct result is "works normally" or "gets rejected".
+- Added `scripts/fast_server.py`, a local server that answers instantly, to test local-address access.
+- Added three new judges: `judge_normal_works`, `judge_local_fetch` and `judge_must_reject` (reused).
+- Added a new category, `ssrf_local_access`.
+- Changed the fast local fetch from a "control" to a vulnerability, because reaching local addresses is a real flaw.
+
+### How it works
+- Each attack is data: a tool, its arguments, and a judge function that decides the verdict.
+- Every attack runs against a fresh server subprocess, so one attack can't affect another.
+- A judge decides from evidence (output text, elapsed time, error), not just from whether the call errored.
+- Two kinds of control: "must work" (normal use) and "must reject" (dangerous input).
+- Verdicts: VULNERABLE (attack worked), SAFE (blocked or fine), INCONCLUSIVE (can't tell, e.g. helper server not running).
+- The report counts verdicts by exact uppercase text, so every judge must return them exactly.
+
+### Why controls matter
+- A fix that blocks everything would pass every attack. Controls catch fixes that break normal behavior.
+- After a patch, the attack cases should flip to SAFE and the controls must stay SAFE. That comparison is the verification step in Phase 5.
+
+### Lessons
+- Slow is a vulnerability even when the call ends in an error (resource exhaustion is judged by time).
+- A harmless result can still prove a flaw: `fetch-local-1` shows reachability, not damage (SSRF).
+- Absolute paths replace the base folder entirely in `pathlib`, so `NOTES_DIR / "/full/path"` ignores `NOTES_DIR`.
+- Build absolute paths from `__file__`, not the current folder, so the toolkit works from anywhere.
