@@ -1,0 +1,40 @@
+{
+  "server": "targets/weak_server/server.py",
+  "generated_at": "2026-11-13T12:15:58",
+  "summary": {
+    "total": 4,
+    "vulnerable": 3,
+    "safe": 1,
+    "inconclusive": 0
+  },
+  "findings": [
+    {
+      "case_id": "traversal-1",
+      "category": "path_traversal",
+      "verdict": "VULNERABLE",
+      "evidence": "secret returned in output: FAKE_SECRET=this-should-never-be-readable",
+      "elapsed": 0.1029251249274239
+    },
+    {
+      "case_id": "calc-injection-control",
+      "category": "code_injection",
+      "verdict": "SAFE",
+      "evidence": "rejected: ToolError: Error calling tool 'calculate': unsupported expression",
+      "elapsed": 0.09979258303064853
+    },
+    {
+      "case_id": "calc-exhaustion-1",
+      "category": "resource_exhaustion",
+      "verdict": "VULNERABLE",
+      "evidence": "took 1.7s (normal calls take ~0s)",
+      "elapsed": 1.7346352499444038
+    },
+    {
+      "case_id": "fetch-hang-1",
+      "category": "hang",
+      "verdict": "VULNERABLE",
+      "evidence": "no answer after 7.6s: tool has no timeout",
+      "elapsed": 7.618601875030436
+    }
+  ]
+}
