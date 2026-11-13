@@ -7,7 +7,7 @@ An agent that tests an MCP server with attacks and faults, patches the code, and
 Work in progress.
 
 - [✅] Phase 1: weak target server, manual client, manual attacks
-- [ ] Phase 2: attack toolkit and pass/fail report
+- [✅ ] Phase 2: attack toolkit and pass/fail report
 - [ ] Phase 3: normal-use tests and a throwaway-copy sandbox
 - [ ] Phase 4: agent that picks and runs attacks
 - [ ] Phase 5: fixer and verifier agents with human approval and PR creation
