@@ -1,7 +1,7 @@
 # Attack Report
 
 - **Server:** `targets/weak_server/server.py`
-- **Generated:** 2026-11-13T14:17:46
+- **Generated:** 2026-11-15T20:52:33
 
 **6 of 11 checks found a vulnerability** (5 safe, 0 inconclusive)
 
