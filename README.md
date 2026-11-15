@@ -76,50 +76,9 @@ toolkit runner ──> fresh MCP server subprocess ──> tool result / error /
 
 ## Repository phases
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 570" role="img" aria-labelledby="phases-title phases-desc">
-  <title id="phases-title">MCP Break-Fix repository phases</title>
-  <desc id="phases-desc">Six phases from manual attacks to a report page and demo.</desc>
-  <rect width="1200" height="570" rx="18" fill="#F3EEE3"/>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#111111">
-    <text x="42" y="48" font-size="16" letter-spacing="3">DELIVERY ROADMAP</text>
-    <rect x="42" y="65" width="72" height="4" fill="#D9541E"/>
-    <text x="42" y="105" font-size="14" font-weight="700">PHASE</text>
-    <text x="285" y="105" font-size="14" font-weight="700">STATUS</text>
-    <text x="500" y="105" font-size="14" font-weight="700">DELIVERABLE</text>
-  </g>
-
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">
-    <rect x="42" y="122" width="1116" height="58" rx="8" fill="#111111"/>
-    <text x="66" y="157" fill="#F3EEE3">01  Weak target + manual attacks</text>
-    <text x="285" y="157" fill="#D9541E" font-weight="700">COMPLETE</text>
-    <text x="500" y="157" fill="#F3EEE3">Planted flaws, client, slow-server demo</text>
-
-    <rect x="42" y="190" width="1116" height="58" rx="8" fill="#D9541E"/>
-    <text x="66" y="225" fill="#111111">02  Automated attack toolkit</text>
-    <text x="285" y="225" fill="#111111" font-weight="700">COMPLETE</text>
-    <text x="500" y="225" fill="#111111">11 checks, judges, isolated runs, reports</text>
-
-    <rect x="42" y="258" width="1116" height="58" rx="8" fill="#111111"/>
-    <text x="66" y="293" fill="#F3EEE3">03  Regression + sandbox foundation</text>
-    <text x="285" y="293" fill="#D9541E" font-weight="700">IN PROGRESS</text>
-    <text x="500" y="293" fill="#F3EEE3">Behavior tests and sandbox scaffolding</text>
-
-    <rect x="42" y="326" width="1116" height="58" rx="8" fill="#F3EEE3" stroke="#111111" stroke-width="2"/>
-    <text x="66" y="361" fill="#111111">04  Attack-selection agent</text>
-    <text x="285" y="361" fill="#D9541E" font-weight="700">PLANNED</text>
-    <text x="500" y="361" fill="#111111">Choose and run relevant checks</text>
-
-    <rect x="42" y="394" width="1116" height="58" rx="8" fill="#F3EEE3" stroke="#111111" stroke-width="2"/>
-    <text x="66" y="429" fill="#111111">05  Fixer + verifier workflow</text>
-    <text x="285" y="429" fill="#D9541E" font-weight="700">PLANNED</text>
-    <text x="500" y="429" fill="#111111">Human approval, remediation, comparison</text>
-
-    <rect x="42" y="462" width="1116" height="58" rx="8" fill="#F3EEE3" stroke="#111111" stroke-width="2"/>
-    <text x="66" y="497" fill="#111111">06  Report page + demo</text>
-    <text x="285" y="497" fill="#D9541E" font-weight="700">PLANNED</text>
-    <text x="500" y="497" fill="#111111">Visual before/after findings</text>
-  </g>
-</svg>
+<p align="center">
+  <img src="assets/phases.svg" alt="MCP Break-Fix delivery roadmap showing six repository phases" width="100%">
+</p>
 
 This phased progression is intentional: it separates detection from
 remediation and creates a measurable baseline before autonomous changes are
