@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Break-Fix security testing</title>
+  <desc id="desc">A minimal isometric box representing an MCP security boundary.</desc>
+
+  <rect width="1200" height="480" fill="#F3EEE3"/>
+
+  <g fill="#111111" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="72" y="82" font-size="16" letter-spacing="3">MCP / SECURITY LAB</text>
+    <rect x="72" y="102" width="56" height="5" fill="#D9541E"/>
+    <text x="72" y="178" font-size="54" font-weight="700" letter-spacing="-2">Break the</text>
+    <text x="72" y="236" font-size="54" font-weight="700" letter-spacing="-2">boundary.</text>
+    <text x="75" y="288" font-size="18">Test what an agent can reach.</text>
+    <text x="75" y="316" font-size="18">Prove what a fix actually changes.</text>
+  </g>
+
+  <g transform="translate(840 245)">
+    <ellipse cx="0" cy="170" rx="190" ry="24" fill="#111111" opacity=".12"/>
+
+    <polygon points="0,-142 174,-48 0,48 -174,-48"
+      fill="#D9541E" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+    <polygon points="-174,-48 0,48 0,222 -174,126"
+      fill="#111111" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+    <polygon points="174,-48 0,48 0,222 174,126"
+      fill="#F3EEE3" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+
+    <path d="M -72 -72 L 0 -111 L 72 -72 L 0 -33 Z"
+      fill="#F3EEE3" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="0" cy="-72" r="13" fill="#D9541E" stroke="#111111" stroke-width="4"/>
+
+    <g fill="#F3EEE3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+      font-size="16" font-weight="700" text-anchor="middle">
+      <text x="-88" y="42" transform="rotate(29 -88 42)">INPUT</text>
+      <text x="88" y="42" transform="rotate(-29 88 42)" fill="#111111">VERIFY</text>
+    </g>
+
+    <path d="M -222 0 H -190 M 190 0 H 222" stroke="#D9541E" stroke-width="5"/>
+  </g>
+
+  <g fill="#111111" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">
+    <text x="75" y="410">11 CHECKS</text>
+    <text x="220" y="410">MCP / STDIO</text>
+    <text x="408" y="410">EVIDENCE FIRST</text>
+    <rect x="75" y="430" width="72" height="4" fill="#D9541E"/>
+    <rect x="220" y="430" width="72" height="4" fill="#D9541E"/>
+    <rect x="408" y="430" width="72" height="4" fill="#D9541E"/>
+  </g>
+</svg>

@@ -1,5 +1,9 @@
 # MCP Break-Fix
 
+<p align="center">
+  <img src="assets/mcp-break-fix-hero.svg" alt="Animated 3D-style MCP security testing visualization" width="100%">
+</p>
+
 > A reproducible security-testing harness for Model Context Protocol (MCP) servers.
 
 MCP Break-Fix deliberately starts with a weak MCP server, attacks it through the
