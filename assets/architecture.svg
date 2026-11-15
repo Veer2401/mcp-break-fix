@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-labelledby="architecture-title architecture-desc">
+  <title id="architecture-title">MCP Break-Fix architecture</title>
+  <desc id="architecture-desc">Attack cases flow through the toolkit runner to a fresh MCP server subprocess, then through evidence judges into JSON and Markdown reports.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#D9541E"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="390" rx="18" fill="#F3EEE3"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#111111">
+    <text x="44" y="52" font-size="16" letter-spacing="3">EVIDENCE PIPELINE</text>
+    <rect x="44" y="70" width="72" height="4" fill="#D9541E"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="middle">
+    <rect x="44" y="132" width="185" height="92" rx="12" fill="#111111"/>
+    <text x="136" y="169" font-size="18" font-weight="700" fill="#F3EEE3">ATTACK CASES</text>
+    <text x="136" y="198" font-size="13" fill="#F3EEE3">tools + args + judges</text>
+
+    <rect x="287" y="132" width="205" height="92" rx="12" fill="#D9541E"/>
+    <text x="389" y="169" font-size="18" font-weight="700" fill="#111111">TOOLKIT RUNNER</text>
+    <text x="389" y="198" font-size="13" fill="#111111">timeouts + isolation</text>
+
+    <rect x="550" y="132" width="220" height="92" rx="12" fill="#111111"/>
+    <text x="660" y="169" font-size="18" font-weight="700" fill="#F3EEE3">MCP SERVER</text>
+    <text x="660" y="198" font-size="13" fill="#F3EEE3">fresh subprocess</text>
+
+    <rect x="828" y="132" width="170" height="92" rx="12" fill="#D9541E"/>
+    <text x="913" y="169" font-size="18" font-weight="700" fill="#111111">EVIDENCE</text>
+    <text x="913" y="198" font-size="13" fill="#111111">result + error + time</text>
+
+    <rect x="1056" y="105" width="100" height="58" rx="10" fill="#F3EEE3" stroke="#111111" stroke-width="2"/>
+    <text x="1106" y="130" font-size="13" font-weight="700" fill="#111111">JSON</text>
+    <text x="1106" y="149" font-size="11" fill="#111111">machine</text>
+
+    <rect x="1056" y="193" width="100" height="58" rx="10" fill="#F3EEE3" stroke="#111111" stroke-width="2"/>
+    <text x="1106" y="218" font-size="13" font-weight="700" fill="#111111">MARKDOWN</text>
+    <text x="1106" y="237" font-size="11" fill="#111111">people</text>
+  </g>
+
+  <g fill="none" stroke="#D9541E" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M 229 178 H 278"/>
+    <path d="M 492 178 H 541"/>
+    <path d="M 770 178 H 819"/>
+    <path d="M 998 150 H 1047"/>
+    <path d="M 998 206 H 1047"/>
+  </g>
+
+  <path d="M 913 240 V 315 H 389 V 233" fill="none" stroke="#111111" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <text x="650" y="342" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#111111">judge outcome and classify: VULNERABLE / SAFE / INCONCLUSIVE</text>
+</svg>

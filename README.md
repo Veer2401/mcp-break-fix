@@ -12,7 +12,7 @@ that can be compared before and after a remediation. The project is designed to
 make security failures observable, testable, and explainable rather than relying
 on a server returning an error.
 
-## Why this project stands out
+## Features
 
 - **Tests the real boundary:** attacks are sent through MCP over stdio, not by
   importing or inspecting the target's implementation.
@@ -48,18 +48,9 @@ evidence and [`NOTES.md`](NOTES.md) for the investigation narrative.
 
 ## Architecture
 
-```text
-attack cases
-     |
-     v
-toolkit runner ──> fresh MCP server subprocess ──> tool result / error / timing
-     |                                                   |
-     +──────────────> judge + evidence <─────────────────+
-                         |
-                         v
-                 reports/report.json
-                 reports/report.md
-```
+<p align="center">
+  <img src="assets/architecture.svg" alt="MCP Break-Fix evidence pipeline architecture" width="100%">
+</p>
 
 ### Core design
 
